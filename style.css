@@ -1,0 +1,134 @@
+body
+{
+	margin: auto 0;
+	background-image: url("https://wallpaperaccess.com/full/741557.jpg");
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-attachment: fixed;
+	display: grid;
+	color:ghostwhite;
+	font-family: 'Chakra Petch', sans-serif;
+}
+.header
+{
+	font-size: 3vh;
+	border-radius: 5px;
+	border: 5px solid white;
+	display:inline-grid;
+	grid-template-columns:1fr 1fr 1fr;
+/*all four lines below are to make header fixed even if we scroll */
+	position: fixed;
+	top: 0;
+	background-color: black;
+    width:99.3% ;
+}	
+.one
+{
+	grid-column: span 2;
+	display: inline-grid;
+	grid-template-columns: repeat(3, minmax(10px,1fr));
+}
+.two
+{
+	justify-self: end;
+}
+.cover
+{
+	margin-top: 7vh;
+	background-color: white;
+	justify-content: center;
+	display: flex;
+	height:auto;
+}
+.three 
+{
+	align-self: center;
+}
+.cimg
+{
+	margin:2vh;
+	height: 50vh;
+}
+.projectgrid > img
+{
+	background-color: slategrey;
+	justify-self: center;
+    height: 50%;
+    width:50%;
+	padding:25%;
+}
+.projectgrid
+{
+	border:10px solid orangered;
+	border-radius: 5px;
+	gap: 10px;
+	display: grid;
+	grid-template-columns: repeat(auto-fill, minmax(200px,1fr));
+}
+.footer
+{
+	font-size: 10px;
+	margin-top: 20px;
+	text-align: center;
+	border-radius: 5px;
+	border: 5px ridge white;
+	background-color: rgb(106, 98, 246);
+}
+
+@media only screen and (max-width:400px)
+{
+	.one
+	{
+		grid-template-columns: repeat(3, minmax(1px, 1fr));
+	}
+	.header
+	{
+		font-size: 4vw; /* very imp to use vw */
+	}
+	.cimg
+	{
+		height: 25vh;
+		width:25vh;
+	}
+	.projectgrid > img
+	{
+		height: 20vh;
+        width: 20vh;
+	}
+}
+
+@media only screen and (max-width:300px)
+{
+	.one
+	{
+		grid-template-columns: repeat(3, minmax(10px, 1fr));
+	}
+	.header
+	{
+		font-size: 4vw;
+	}
+}
+
+@media only screen and (max-width:250px)
+{
+	.one
+	{
+		grid-template-columns: repeat(3, minmax(10px, 1fr));
+	}
+	.header
+	{
+		font-size: 3vw;
+	}
+}
+
+@media only screen and (max-width:200px)
+{
+	.one
+	{
+		grid-template-columns: repeat(3, minmax(10px, 1fr));
+	}
+	.header
+	{
+		font-size: 1.5vh;
+	}
+}
